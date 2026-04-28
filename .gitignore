@@ -4,6 +4,6 @@ main.log
 main.out
 main.fdb_latexmk
 main.synctex.gz
-main.pdf
+main .pdf
 
 chapters/*.aux
