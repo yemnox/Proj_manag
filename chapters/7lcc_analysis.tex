@@ -1,7 +1,216 @@
-\chapter{Life Cycle Cost Analysis (LCC)}
-    \section{Introduction and Methodology}
-    \section{Initial Cost (Migration)}
-    \section{Annual Cloud Costs} 
-    \section{Maintenance and Support}
-    \section{Energy Consumption \& Environmental Impact} 
-    \section{Total Cost of Ownership (TCO over 3 years)}
+\documentclass[12pt,a4paper]{article}
+
+% ─── PACKAGES ────────────────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{times}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{amsmath}
+
+% ─── COLORS ──────────────────────────────────────────────────────────────────
+\definecolor{darkgreen}{HTML}{1B4332}
+\definecolor{midgreen}{HTML}{2D6A4F}
+\definecolor{lightgreen}{HTML}{40916C}
+\definecolor{palegreen}{HTML}{D8F3DC}
+\definecolor{rowalt}{HTML}{F0FFF4}
+\definecolor{headerrow}{HTML}{2D6A4F}
+
+% ─── SECTION FORMATTING ──────────────────────────────────────────────────────
+\titleformat{\section}{\Large\bfseries\color{darkgreen}}{}{0em}{}%
+  [\vspace{0.2em}\color{midgreen}\rule{\linewidth}{0.5pt}]
+\titleformat{\subsection}{\large\bfseries\color{midgreen}}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{lightgreen}}{}{0em}{}
+
+% ─── HEADER / FOOTER ─────────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% ─── TABLE HELPERS ───────────────────────────────────────────────────────────
+\renewcommand{\arraystretch}{1.4}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\begin{document}
+
+% ═══════════════════════════════════════════════════════════════════════════
+%  SECTION 7 --- ENERGY COSTS IN THE LIFE CYCLE COST ANALYSIS
+%  ESG Team Contribution
+% ═══════════════════════════════════════════════════════════════════════════
+
+\section{Section 7 --- Energy Costs in the Life Cycle Cost Analysis}
+
+\subsection{Life Cycle Costing: Scope and Purpose}
+
+Life Cycle Costing (LCC) is a financial evaluation methodology that
+determines the \textit{total cost of ownership} of a system across its
+complete operational lifespan, rather than assessing acquisition costs in
+isolation. LCC aggregates all expenditure categories --- including capital
+investment, energy consumption, maintenance, operational overheads, and
+end-of-life decommissioning --- into a unified cost model that enables
+rigorous comparison between infrastructure alternatives.
+
+This section constitutes the \textbf{ESG team's formal contribution to the
+Finance team's LCC model}: it provides the quantified energy cost inputs
+for both the on-premise and cloud SaaS scenarios, derived directly from the
+Life Cycle Assessment (LCA) findings documented in Section~2.6. These
+figures feed into the Total Cost of Ownership (TCO) comparative analysis
+presented in Section~7.6 of the main project report.
+
+\subsection{7.1 On-Premise Energy Costs}
+
+The on-premise energy cost model encompasses all direct electricity
+expenditures associated with the operation of dedicated server hardware,
+including associated infrastructure overhead (cooling, power conditioning,
+and uninterruptible power supply systems). Annual consumption figures are
+derived from the LCA hardware inventory and operational energy calculations
+(Section~2.6, LCA.2).
+
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{X r r}
+\toprule
+\rowcolor{headerrow}
+\textcolor{white}{\textbf{Cost Component}} &
+\textcolor{white}{\textbf{Annual Cost (\texteuro{})}} &
+\textcolor{white}{\textbf{3-Year Total (\texteuro{})}} \\
+\midrule
+\rowcolor{rowalt}
+  Server electricity (26{,}809\,kWh $\times$ \texteuro{}0.12/kWh)
+  & \texteuro{}3{,}217 & \texteuro{}9{,}651 \\
+  HVAC and cooling system overhead
+  & \texteuro{}800    & \texteuro{}2{,}400 \\
+\rowcolor{rowalt}
+  UPS and power conditioning losses
+  & \texteuro{}200    & \texteuro{}600 \\
+\midrule
+\rowcolor{palegreen}
+  \textbf{TOTAL --- On-Premise Energy}
+  & \textbf{\texteuro{}4{,}217/year} & \textbf{\texteuro{}12{,}651} \\
+\bottomrule
+\end{tabularx}
+\captionof{table}{On-Premise Energy Cost Summary --- 3-Year Assessment Period}
+
+\vspace{0.5em}
+\textbf{Notes:} The electricity tariff of \texteuro{}0.12/kWh reflects the
+applicable commercial rate consistent with 2023 European energy pricing
+benchmarks (IEA, 2023). HVAC and UPS figures are derived from the hardware
+power inventory in Section~2.6 (Table~LCA.1).
+
+\subsection{7.2 Cloud SaaS Energy Costs}
+
+In the cloud SaaS operating model, energy costs are structurally embedded
+within the monthly subscription fee negotiated with the cloud service
+provider. The organisation no longer incurs separate, direct electricity
+expenditures for computing operations. The only residual direct energy cost
+attributable to the organisation is end-user device and office connectivity
+consumption.
+
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{X r r}
+\toprule
+\rowcolor{headerrow}
+\textcolor{white}{\textbf{Cost Component}} &
+\textcolor{white}{\textbf{Annual Cost (\texteuro{})}} &
+\textcolor{white}{\textbf{3-Year Total (\texteuro{})}} \\
+\midrule
+\rowcolor{rowalt}
+  Server and infrastructure energy (bundled within SaaS subscription)
+  & \texteuro{}0 direct & \texteuro{}0 direct \\
+  Office connectivity and end-user devices
+  & \texteuro{}150 & \texteuro{}450 \\
+\midrule
+\rowcolor{palegreen}
+  \textbf{TOTAL --- Direct Cloud Energy Cost}
+  & \textbf{\texteuro{}150/year} & \textbf{\texteuro{}450} \\
+\bottomrule
+\end{tabularx}
+\captionof{table}{Cloud SaaS Direct Energy Cost Summary --- 3-Year Assessment Period}
+
+\vspace{0.5em}
+\textbf{Note:} Server-side energy costs borne by the cloud provider are
+accounted for within the SaaS licensing fee, captured under the
+subscription cost line of the overall TCO model. This table reflects only
+the incremental direct energy costs remaining under the organisation's
+operational control.
+
+\subsection{7.3 Energy Savings Summary}
+
+The net energy cost reduction attributable to the cloud migration over the
+three-year assessment period is:
+
+\[
+\text{Net Energy Cost Savings}
+  = \text{\texteuro{}}12{,}651 - \text{\texteuro{}}450
+  = \mathbf{\text{\texteuro{}}12{,}201}
+  \quad (96.4\%\ \text{reduction over 3 years})
+\]
+
+This \texteuro{}12,201 saving represents a direct and quantifiable input to the
+\textbf{TCO comparison} in Section~7.6 of the main report. When
+consolidated with hardware CAPEX savings from the elimination of physical
+server procurement, reduced IT staffing costs, and lower maintenance
+expenditure, the cloud SaaS scenario demonstrates a substantially lower
+total cost of ownership over the three-year horizon.
+
+\vspace{0.5em}
+\begin{tabularx}{\textwidth}{X r r r}
+\toprule
+\rowcolor{headerrow}
+\textcolor{white}{\textbf{Scenario}} &
+\textcolor{white}{\textbf{Annual (\texteuro{})}} &
+\textcolor{white}{\textbf{3-Year Total (\texteuro{})}} &
+\textcolor{white}{\textbf{Reduction vs.\ On-Premise}} \\
+\midrule
+\rowcolor{rowalt}
+  On-Premise  & \texteuro{}4{,}217 & \texteuro{}12{,}651 & --- \\
+  Cloud SaaS  & \texteuro{}150     & \texteuro{}450      & \textbf{\texteuro{}12{,}201 (96.4\%)} \\
+\midrule
+\rowcolor{palegreen}
+  \textbf{Net Saving}
+  & \textbf{\texteuro{}4{,}067/year}
+  & \textbf{\texteuro{}12{,}201}
+  & \textbf{96.4\%} \\
+\bottomrule
+\end{tabularx}
+\captionof{table}{Energy Cost Comparative Summary --- On-Premise vs.\ Cloud SaaS}
+
+\newpage
+
+% ─── REFERENCES ──────────────────────────────────────────────────────────────
+\section*{References}
+\addcontentsline{toc}{section}{References}
+
+\begin{itemize}[label={}, leftmargin=1.5em, itemsep=0.3em]
+  \item Greenhouse Gas Protocol (2023). \textit{Corporate Value Chain
+    (Scope 3) Accounting and Reporting Standard}. World Resources
+    Institute \& WBCSD.
+  \item International Energy Agency --- IEA (2023). \textit{CO$_2$
+    Emissions from Fuel Combustion --- Highlights}. IEA Publications,
+    Paris.
+  \item Amazon Web Services (2023). \textit{AWS Sustainability Report
+    2023}. Available at: \url{https://sustainability.aboutamazon.com}
+  \item Accenture (2020). \textit{The Green Behind the Cloud}. Accenture
+    Research. Available at:
+    \url{https://www.accenture.com/us-en/insights/technology/green-behind-cloud}
+  \item European Environment Agency (2023). \textit{Greenhouse Gas
+    Emission Intensity of Electricity Generation in Europe}. EEA Report
+    No.~16/2023.
+  \item Uptime Institute (2023). \textit{Global Data Center Survey Results
+    2023}. Uptime Institute, New York.
+\end{itemize}
+
+\end{document}
