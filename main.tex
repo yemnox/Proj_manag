@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{graphicx}
+
+\geometry{left=1.5cm,right=1.5cm,top=3cm,bottom=3cm}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    showstringspaces=false
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+\thispagestyle{empty}
+%---------------------------------FIRST PAGE----------------------------------------------%
+% Header logos and info
+\begin{minipage}{0.2\textwidth}
+    \includegraphics[width=3cm]{insat_logo.png}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+    \centering
+    University of Carthage\\
+    National Institute of Applied Sciences and Technology\\
+    Ministry of Higher Education and Scientific Research
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+    \flushright
+    \includegraphics[width=3cm]{carthage_logo.png}
+\end{minipage}
+
+\vspace{0.5cm}
+\begin{center}
+    \rule{\textwidth}{0.4pt}
+\end{center}
+\vspace{0.5cm}
+
+% Title
+\begin{center}
+    {\Large Project Report:}\\[1em]
+    \textbf{\Huge Distributed Detection of CPU and Bandwidth Consumption Anomalies in High-Speed Networks Using Mobile Agents}\\
+\end{center}
+
+\vspace{0.5cm}
+\begin{center}
+    \rule{0.8\textwidth}{0.3pt}
+\end{center}
+\vspace{0.5cm}
+
+% Field of study
+\begin{center}
+    \Large{Field of Study:}\\
+    \Large\textbf{Computer Networks and Telecommunications}\\[1cm]
+    
+    \Large{Prepared by:}\\
+    \textbf{\Large Emna Drihem}\\
+    \textbf{\Large Yasmine Ferjani}\\
+    \textbf{\Large Hanine Ben Amor}\\
+    \textbf{\Large Mariem Melki}\\
+    \textbf{\Large Sirine Hedhili}\\
+    \textbf{\Large Aymen Ghazouani}\\
+    \textbf{\Large Anas Zarrouk}\\[1cm]
+    
+    \Large{Supervised by:}\\
+    \Large\textbf{Prof. Karoui Kamel}\\[0.5cm]
+    
+    \rule{0.8\textwidth}{0.3pt}\\[1cm]
+    \textbf{Academic Year: 2025 - 2026}
+
+%
+\newpage
+%---------------------------------TABLE OF CONTENTS----------------------------------------------%
+\tableofcontents
+\newpage
+%---------------------------------CHAPTERS----------------------------------------------%
+
+\include{chapters/1intro.tex}
+\include{chapters/2project_charter.tex} %by Aymen, Responsable ESG&ACV
+\include{chapters/3stakeholder_management.tex} %by Sirine, Qualité Risques & Communication
+\include{chapters/4scope_management.tex} %by Hanine, Responsable Scope & WBS
+\include{chapters/5time_cost.tex} %by Jass, Planification (Gantt + CPM)
+\include{chapters/6risks.tex}
+\include{chapters/7lcc_analysis.tex}
+\include{chapters/8dashboard.tex}
+\include{chapters/9conclusion.tex}
+
+
+\end{center}
+\end{document}
