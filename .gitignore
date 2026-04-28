@@ -8,3 +8,10 @@ main.pdf
 main.toc
 
 chapters/*.aux
+chapters/*.log
+chapters/*.out
+chapters/*.fdb_latexmk
+chapters/*.synctex.gz*
+chapters/*.toc
+chapters/*.pdf
+chapters/*.fls

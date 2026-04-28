@@ -1,43 +1,63 @@
 \documentclass[12pt,a4paper]{report}
 
-% ── Encoding & fonts ──────────────────────────────────────────
+% ─── PACKAGES ────────────────────────────────────────────────────────────────
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{times}
-\usepackage[english]{babel}      % from file 2
-
-% ── Page layout ───────────────────────────────────────────────
-\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
-% Note: Original file 1 had left=2.5cm, right=2.5cm.
-% File 2 had left=1.5cm, right=1.5cm, top=3cm, bottom=3cm.
-% Using file 1's settings above. If you prefer file 2's margins, uncomment next line:
-%\geometry{left=1.5cm,right=1.5cm,top=3cm,bottom=3cm}
-
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
 \usepackage{setspace}
 \onehalfspacing
-
-% ── Tables ────────────────────────────────────────────────────
+\usepackage{times}
 \usepackage{booktabs}
-\usepackage{tabularx}
+\usepackage{longtable}
 \usepackage{array}
 \usepackage{multirow}
-\usepackage{longtable}
-\usepackage{float}
-
-% ── Math & code ─────────────────────────────────────────────── (from file 2)
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{caption}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{listings}
+\usepackage{float}
+\usepackage{parskip}
+\usepackage{ragged2e}
 
-% ── Headers & sections ──────────────────────────────────────── (from file 2)
-\usepackage{fancyhdr}
-\usepackage{titlesec}
-\usepackage{caption}
+% ─── HYPERREF SETUP ──────────────────────────────────────────────────────────
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    citecolor=blue,
+}
 
-% ── Colors & shading ──────────────────────────────────────────
-\usepackage[table]{xcolor}
+% ─── LISTINGS SETUP ──────────────────────────────────────────────────────────
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    showstringspaces=false
+}
 
-% Priority badge colors only
+% ─── COLORS ──────────────────────────────────────────────────────────────────
+% Theme colors
+\definecolor{darkgreen}{HTML}{1B4332}
+\definecolor{midgreen}{HTML}{2D6A4F}
+\definecolor{lightgreen}{HTML}{40916C}
+\definecolor{palegreen}{HTML}{D8F3DC}
+\definecolor{rowalt}{HTML}{F0FFF4}
+\definecolor{headerrow}{HTML}{2D6A4F}
+
+% Priority badge colors
 \definecolor{musthave}{HTML}{D9534F}
 \definecolor{musthavebg}{HTML}{FADADD}
 \definecolor{shouldhave}{HTML}{E07B39}
@@ -49,43 +69,26 @@
 \definecolor{tableheader}{HTML}{F2F2F2} 
 \definecolor{tableborder}{HTML}{BBBBBB}
 
-% ── Misc ──────────────────────────────────────────────────────
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{parskip}
-\usepackage{enumitem}
-\usepackage{ragged2e}
+% ─── SECTION FORMATTING ──────────────────────────────────────────────────────
+\titleformat{\section}{\Large\bfseries\color{darkgreen}}{}{0em}{}[\vspace{0.2em}\color{midgreen}\rule{\linewidth}{0.5pt}]
+\titleformat{\subsection}{\large\bfseries\color{midgreen}}{}{0em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{lightgreen}}{}{0em}{}
 
-% ── Hyperref setup (from file 2) ──────────────────────────────
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    citecolor=blue,
-}
-
-% ── Listings setup (from file 2) ──────────────────────────────
-\lstset{
-    basicstyle=\ttfamily\small,
-    breaklines=true,
-    frame=single,
-    numbers=left,
-    numberstyle=\tiny,
-    showstringspaces=false
-}
-
-% ── Page style (from file 2) ──────────────────────────────────
+% ─── HEADER / FOOTER ─────────────────────────────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{\thepage}
+\rfoot{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-% ── Global table settings ─────────────────────────────────────
-\setlength{\tabcolsep}{8pt}
-\renewcommand{\arraystretch}{1.6}
+% ─── TABLE HELPERS ───────────────────────────────────────────────────────────
+\newcommand{\hdrrow}[1]{\rowcolor{headerrow}\textcolor{white}{\textbf{#1}}}
+\renewcommand{\arraystretch}{1.4}
 
+% ─── GLOBAL TABLE SETTINGS ───────────────────────────────────────────────────
+\setlength{\tabcolsep}{8pt}
+\setlength{\arrayrulewidth}{0.5pt}
 
 
 
@@ -167,6 +170,7 @@
 \include{chapters/7lcc_analysis.tex}
 \include{chapters/8dashboard.tex}
 \include{chapters/9conclusion.tex}
+\include{chapters/10reference.tex}
 
 
 
