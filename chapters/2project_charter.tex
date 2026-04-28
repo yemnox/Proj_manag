@@ -1,59 +1,9 @@
-\documentclass[12pt,a4paper]{article}
-
-% ─── PACKAGES ────────────────────────────────────────────────────────────────
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage{times}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{xcolor}
-\usepackage{colortbl}
-\usepackage{graphicx}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage{caption}
-\usepackage{amsmath}
-
-% ─── COLORS ──────────────────────────────────────────────────────────────────
-\definecolor{darkgreen}{HTML}{1B4332}
-\definecolor{midgreen}{HTML}{2D6A4F}
-\definecolor{lightgreen}{HTML}{40916C}
-\definecolor{palegreen}{HTML}{D8F3DC}
-\definecolor{rowalt}{HTML}{F0FFF4}
-\definecolor{headerrow}{HTML}{2D6A4F}
-
-% ─── SECTION FORMATTING ──────────────────────────────────────────────────────
-\titleformat{\section}{\Large\bfseries\color{darkgreen}}{}{0em}{}%
-  [\vspace{0.2em}\color{midgreen}\rule{\linewidth}{0.5pt}]
-\titleformat{\subsection}{\large\bfseries\color{midgreen}}{}{0em}{}
-\titleformat{\subsubsection}{\normalsize\bfseries\color{lightgreen}}{}{0em}{}
-
-% ─── HEADER / FOOTER ─────────────────────────────────────────────────────────
-\pagestyle{fancy}
-\fancyhf{}
-\rfoot{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-
-% ─── TABLE HELPERS ───────────────────────────────────────────────────────────
-\renewcommand{\arraystretch}{1.4}
-
-% ─────────────────────────────────────────────────────────────────────────────
-\begin{document}
 
 % ═══════════════════════════════════════════════════════════════════════════
 %  SECTION 2.6 — ESG CRITERIA AND SUSTAINABILITY INDICATORS
 % ═══════════════════════════════════════════════════════════════════════════
 
-\section{Section 2.6 --- ESG Criteria and Sustainability Indicators}
+\chapter{Section 2.6 --- ESG Criteria and Sustainability Indicators}
 
 The ESG (Environmental, Social, and Governance) framework constitutes a
 transversal pillar of the Green ERP Migration project, embedded from the
@@ -64,7 +14,7 @@ criteria inform scope definition, vendor selection, risk assessment, and
 post-deployment performance monitoring throughout the entire project
 lifecycle.
 
-\subsection{2.6.1 Environmental Criteria}
+\section{2.6.1 Environmental Criteria}
 
 The primary environmental rationale for transitioning from an on-premise ERP
 infrastructure to a cloud-based SaaS (Software as a Service) solution lies
@@ -125,7 +75,7 @@ both a regulatory requirement and a core deliverable of this project.
 
 \end{itemize}
 
-\subsection{2.6.2 Social Criteria}
+\section{2.6.2 Social Criteria}
 
 \begin{itemize}[leftmargin=*, label=\textcolor{midgreen}{$\bullet$}]
 
@@ -164,7 +114,7 @@ both a regulatory requirement and a core deliverable of this project.
 
 \end{itemize}
 
-\subsection{2.6.3 Governance Criteria}
+\section{2.6.3 Governance Criteria}
 
 \begin{itemize}[leftmargin=*, label=\textcolor{midgreen}{$\bullet$}]
 
@@ -202,7 +152,7 @@ both a regulatory requirement and a core deliverable of this project.
 
 \end{itemize}
 
-\subsection{2.6.4 ESG Key Performance Indicators (KPIs)}
+\section{2.6.4 ESG Key Performance Indicators (KPIs)}
 
 The following table presents the comprehensive ESG KPI framework
 established for this project. These indicators define measurable targets
@@ -321,9 +271,9 @@ dashboard (Section~8.2).
 %  LIFE CYCLE ASSESSMENT (LCA) --- ON-PREMISE vs. CLOUD SaaS
 % ═══════════════════════════════════════════════════════════════════════════
 
-\section{Life Cycle Assessment (LCA) --- On-Premise Servers vs.\ Cloud SaaS}
+\chapter{Life Cycle Assessment (LCA) --- On-Premise Servers vs.\ Cloud SaaS}
 
-\subsection{Methodology and Standards}
+\section{Methodology and Standards}
 
 A Life Cycle Assessment (LCA) is a structured environmental analysis
 technique that quantifies the cumulative environmental impact of a product
@@ -343,9 +293,9 @@ The analysis is conducted in accordance with the following standards:
     emphasis on hardware manufacturing and end-of-life disposal phases.
 \end{itemize}
 
-\subsection{LCA.1 --- Functional Unit and System Boundary}
+\section{LCA.1 --- Functional Unit and System Boundary}
 
-\subsubsection{Functional Unit}
+\subsection{Functional Unit}
 
 The functional unit defines the reference basis against which both
 scenarios are evaluated, ensuring strict comparability:
@@ -356,7 +306,7 @@ management, supply chain, accounting, and HR modules --- to 50 concurrent
 users over a continuous operational period of three years.}
 \end{quote}
 
-\subsubsection{System Boundary}
+\subsection{System Boundary}
 
 This study adopts a \textbf{cradle-to-grave} system boundary, encompassing
 the following lifecycle phases:
@@ -370,9 +320,9 @@ the following lifecycle phases:
     controlled landfill disposal
 \end{itemize}
 
-\subsection{LCA.2 --- On-Premise Scenario: Inventory Analysis}
+\section{LCA.2 --- On-Premise Scenario: Inventory Analysis}
 
-\subsubsection{Hardware Inventory}
+\subsection{Hardware Inventory}
 
 The on-premise ERP infrastructure requires the following dedicated server
 hardware components:
@@ -406,7 +356,7 @@ greenhouse gas emissions generated throughout the manufacturing process of
 a device --- encompassing material extraction, component fabrication, and
 assembly --- prior to any operational use.
 
-\subsubsection{Operational Energy --- On-Premise}
+\subsection{Operational Energy --- On-Premise}
 
 Total installed hardware power draw: approximately \textbf{1{,}700\,W}
 under continuous operation. Applying a \textbf{PUE of 1.8} --- reflecting
@@ -435,7 +385,7 @@ Applying the average European grid emission intensity of
   = \mathbf{18.6\,\mathrm{t\,CO_2e}}
 \]
 
-\subsubsection{Scope 3 --- Hardware Manufacturing Emissions}
+\subsection{Scope 3 --- Hardware Manufacturing Emissions}
 
 Embodied carbon is pro-rated to the 3-year project horizon on the basis of
 the 5-year hardware design lifespan:
@@ -448,7 +398,7 @@ the 5-year hardware design lifespan:
   = \mathbf{1{,}950\,\mathrm{kg\,CO_2e}}
 \]
 
-\subsubsection{Total On-Premise LCA Summary (3 Years)}
+\subsection{Total On-Premise LCA Summary (3 Years)}
 
 \vspace{0.5em}
 \begin{tabularx}{\textwidth}{X l r}
@@ -471,7 +421,7 @@ the 5-year hardware design lifespan:
 \end{tabularx}
 \captionof{table}{On-Premise LCA Emissions Summary --- 3-Year Period}
 
-\subsection{LCA.3 --- Cloud SaaS Scenario: Inventory Analysis}
+\section{LCA.3 --- Cloud SaaS Scenario: Inventory Analysis}
 
 In the cloud SaaS model, the organisation no longer procures or operates
 dedicated server infrastructure. Computing resources are provisioned
@@ -480,7 +430,7 @@ Google Cloud Platform). The organisation's attributable environmental
 impact is calculated as its proportional resource allocation within the
 provider's shared, multi-tenant infrastructure.
 
-\subsubsection{Key Modelling Assumptions}
+\subsection{Key Modelling Assumptions}
 
 \begin{itemize}[label=\textcolor{lightgreen}{--}]
   \item Cloud instance equivalent: 8\,vCPUs, 32\,GB RAM --- sufficient to
@@ -496,7 +446,7 @@ provider's shared, multi-tenant infrastructure.
     $\sim$\textbf{0.08\,kg\,CO$_2$e/kWh}.
 \end{itemize}
 
-\subsubsection{Operational Energy --- Cloud}
+\subsection{Operational Energy --- Cloud}
 
 Estimated workload power attributable to the organisation's share:
 \textbf{180\,W} at 25\% CPU utilisation.
@@ -519,7 +469,7 @@ Estimated workload power attributable to the organisation's share:
   = \mathbf{423\,\mathrm{kg\,CO_2e}}
 \]
 
-\subsubsection{Total Cloud SaaS LCA Summary (3 Years)}
+\subsection{Total Cloud SaaS LCA Summary (3 Years)}
 
 \vspace{0.5em}
 \begin{tabularx}{\textwidth}{X l r}
@@ -542,7 +492,7 @@ Estimated workload power attributable to the organisation's share:
 \end{tabularx}
 \captionof{table}{Cloud SaaS LCA Emissions Summary --- 3-Year Period}
 
-\subsection{LCA.4 --- Comparative Results}
+\section{LCA.4 --- Comparative Results}
 
 \vspace{0.5em}
 \begin{tabularx}{\textwidth}{X r r r r}
@@ -568,7 +518,7 @@ Estimated workload power attributable to the organisation's share:
 
 \vspace{0.5em}
 
-\subsubsection{Key Findings and Interpretation}
+\subsection{Key Findings and Interpretation}
 
 \begin{itemize}[label=\textcolor{midgreen}{$\bullet$}]
 
@@ -602,8 +552,8 @@ Estimated workload power attributable to the organisation's share:
 \newpage
 
 % ─── REFERENCES ──────────────────────────────────────────────────────────────
-\section*{References}
-\addcontentsline{toc}{section}{References}
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
 
 \begin{itemize}[label={}, leftmargin=1.5em, itemsep=0.3em]
   \item Greenhouse Gas Protocol (2023). \textit{Corporate Value Chain
@@ -636,4 +586,3 @@ Estimated workload power attributable to the organisation's share:
     Global Best Practice.
 \end{itemize}
 
-\end{document}

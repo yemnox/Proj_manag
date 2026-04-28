@@ -1,60 +1,12 @@
-\documentclass[12pt,a4paper]{article}
-
-% ─── PACKAGES ────────────────────────────────────────────────────────────────
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage{times}
-\usepackage{booktabs}
-\usepackage{array}
-\usepackage{xcolor}
-\usepackage{colortbl}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage{tabularx}
-\usepackage{caption}
-\usepackage{textcomp}
-\usepackage{amsmath}
-
-% ─── COLORS ──────────────────────────────────────────────────────────────────
-\definecolor{darkgreen}{HTML}{1B4332}
-\definecolor{midgreen}{HTML}{2D6A4F}
-\definecolor{lightgreen}{HTML}{40916C}
-\definecolor{palegreen}{HTML}{D8F3DC}
-\definecolor{rowalt}{HTML}{F0FFF4}
-\definecolor{headerrow}{HTML}{2D6A4F}
-
-% ─── SECTION FORMATTING ──────────────────────────────────────────────────────
-\titleformat{\section}{\Large\bfseries\color{darkgreen}}{}{0em}{}%
-  [\vspace{0.2em}\color{midgreen}\rule{\linewidth}{0.5pt}]
-\titleformat{\subsection}{\large\bfseries\color{midgreen}}{}{0em}{}
-\titleformat{\subsubsection}{\normalsize\bfseries\color{lightgreen}}{}{0em}{}
-
-% ─── HEADER / FOOTER ─────────────────────────────────────────────────────────
-\pagestyle{fancy}
-\fancyhf{}
-\rfoot{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-
-% ─── TABLE HELPERS ───────────────────────────────────────────────────────────
-\renewcommand{\arraystretch}{1.4}
-
-% ─────────────────────────────────────────────────────────────────────────────
-\begin{document}
 
 % ═══════════════════════════════════════════════════════════════════════════
 %  SECTION 7 --- ENERGY COSTS IN THE LIFE CYCLE COST ANALYSIS
 %  ESG Team Contribution
 % ═══════════════════════════════════════════════════════════════════════════
 
-\section{Section 7 --- Energy Costs in the Life Cycle Cost Analysis}
+\chapter{Section 7 --- Energy Costs in the Life Cycle Cost Analysis}
 
-\subsection{Life Cycle Costing: Scope and Purpose}
+\section{Life Cycle Costing: Scope and Purpose}
 
 Life Cycle Costing (LCC) is a financial evaluation methodology that
 determines the \textit{total cost of ownership} of a system across its
@@ -71,7 +23,7 @@ Life Cycle Assessment (LCA) findings documented in Section~2.6. These
 figures feed into the Total Cost of Ownership (TCO) comparative analysis
 presented in Section~7.6 of the main project report.
 
-\subsection{7.1 On-Premise Energy Costs}
+\section{7.1 On-Premise Energy Costs}
 
 The on-premise energy cost model encompasses all direct electricity
 expenditures associated with the operation of dedicated server hardware,
@@ -110,7 +62,7 @@ applicable commercial rate consistent with 2023 European energy pricing
 benchmarks (IEA, 2023). HVAC and UPS figures are derived from the hardware
 power inventory in Section~2.6 (Table~LCA.1).
 
-\subsection{7.2 Cloud SaaS Energy Costs}
+\section{7.2 Cloud SaaS Energy Costs}
 
 In the cloud SaaS operating model, energy costs are structurally embedded
 within the monthly subscription fee negotiated with the cloud service
@@ -147,7 +99,7 @@ subscription cost line of the overall TCO model. This table reflects only
 the incremental direct energy costs remaining under the organisation's
 operational control.
 
-\subsection{7.3 Energy Savings Summary}
+\section{7.3 Energy Savings Summary}
 
 The net energy cost reduction attributable to the cloud migration over the
 three-year assessment period is:
@@ -191,8 +143,8 @@ total cost of ownership over the three-year horizon.
 \newpage
 
 % ─── REFERENCES ──────────────────────────────────────────────────────────────
-\section*{References}
-\addcontentsline{toc}{section}{References}
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
 
 \begin{itemize}[label={}, leftmargin=1.5em, itemsep=0.3em]
   \item Greenhouse Gas Protocol (2023). \textit{Corporate Value Chain
@@ -213,4 +165,3 @@ total cost of ownership over the three-year horizon.
     2023}. Uptime Institute, New York.
 \end{itemize}
 
-\end{document}

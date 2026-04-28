@@ -1,59 +1,12 @@
-\documentclass[12pt,a4paper]{article}
-
-% ─── PACKAGES ────────────────────────────────────────────────────────────────
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{geometry}
-\geometry{margin=2.5cm}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage{times}
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{xcolor}
-\usepackage{colortbl}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
-\usepackage{titlesec}
-\usepackage{fancyhdr}
-\usepackage{tabularx}
-\usepackage{caption}
-
-% ─── COLORS ──────────────────────────────────────────────────────────────────
-\definecolor{darkgreen}{HTML}{1B4332}
-\definecolor{midgreen}{HTML}{2D6A4F}
-\definecolor{lightgreen}{HTML}{40916C}
-\definecolor{palegreen}{HTML}{D8F3DC}
-\definecolor{rowalt}{HTML}{F0FFF4}
-\definecolor{headerrow}{HTML}{2D6A4F}
-
-% ─── SECTION FORMATTING ──────────────────────────────────────────────────────
-\titleformat{\section}{\Large\bfseries\color{darkgreen}}{}{0em}{}%
-  [\vspace{0.2em}\color{midgreen}\rule{\linewidth}{0.5pt}]
-\titleformat{\subsection}{\large\bfseries\color{midgreen}}{}{0em}{}
-\titleformat{\subsubsection}{\normalsize\bfseries\color{lightgreen}}{}{0em}{}
-
-% ─── HEADER / FOOTER ─────────────────────────────────────────────────────────
-\pagestyle{fancy}
-\fancyhf{}
-\rfoot{\thepage}
-\renewcommand{\headrulewidth}{0pt}
-
-% ─── TABLE HELPERS ───────────────────────────────────────────────────────────
-\renewcommand{\arraystretch}{1.4}
-
-% ─────────────────────────────────────────────────────────────────────────────
-\begin{document}
 
 % ═══════════════════════════════════════════════════════════════════════════
 %  SECTION 8 --- ESG INDICATORS FOR THE PROJECT DASHBOARD
 %  ESG Team Contribution
 % ═══════════════════════════════════════════════════════════════════════════
 
-\section{Section 8 --- ESG Indicators for the Project Dashboard}
+\chapter{Section 8 --- ESG Indicators for the Project Dashboard}
 
-\subsection{Project Dashboard: Purpose and Architecture}
+\section{Project Dashboard: Purpose and Architecture}
 
 A project dashboard is a structured, real-time monitoring instrument that
 consolidates key project metrics into a single, continuously updated
@@ -69,7 +22,7 @@ schedule, budget, risk, and ESG performance. This section defines the
 ownership responsibilities, performance targets, and the escalation
 thresholds beyond which corrective action is mandated.
 
-\subsection{8.1 ESG Dashboard KPI Table}
+\section{8.1 ESG Dashboard KPI Table}
 
 The following table presents the complete set of ESG Key Performance
 Indicators (KPIs) assigned to the project dashboard. Each indicator is
@@ -146,7 +99,7 @@ procedures are triggered.
 \bottomrule
 \end{longtable}
 
-\subsection{8.2 ESG Reporting Requirements}
+\section{8.2 ESG Reporting Requirements}
 
 Each bi-weekly project status report must incorporate a dedicated ESG
 section, comprising the following mandatory components:
@@ -179,7 +132,7 @@ section, comprising the following mandatory components:
 
 \end{itemize}
 
-\subsection{8.3 Escalation Procedure}
+\section{8.3 Escalation Procedure}
 
 A structured escalation protocol governs the response to sustained ESG
 performance deviations, ensuring that issues are addressed at the
@@ -203,8 +156,8 @@ compliance restoration.
 \newpage
 
 % ─── REFERENCES ──────────────────────────────────────────────────────────────
-\section*{References}
-\addcontentsline{toc}{section}{References}
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
 
 \begin{itemize}[label={}, leftmargin=1.5em, itemsep=0.3em]
   \item Greenhouse Gas Protocol (2023). \textit{Corporate Value Chain
@@ -224,4 +177,3 @@ compliance restoration.
     2023}. Available at: \url{https://sustainability.aboutamazon.com}
 \end{itemize}
 
-\end{document}
