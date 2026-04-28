@@ -1,23 +1,62 @@
 \documentclass[12pt,a4paper]{report}
+
+% ── Encoding & fonts ──────────────────────────────────────────
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx}
+\usepackage{times}
+\usepackage[english]{babel}      % from file 2
+
+% ── Page layout ───────────────────────────────────────────────
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+% Note: Original file 1 had left=2.5cm, right=2.5cm.
+% File 2 had left=1.5cm, right=1.5cm, top=3cm, bottom=3cm.
+% Using file 1's settings above. If you prefer file 2's margins, uncomment next line:
+%\geometry{left=1.5cm,right=1.5cm,top=3cm,bottom=3cm}
+
+\usepackage{setspace}
+\onehalfspacing
+
+% ── Tables ────────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{float}
+
+% ── Math & code ─────────────────────────────────────────────── (from file 2)
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{hyperref}
 \usepackage{listings}
-\usepackage{xcolor}
-\usepackage{geometry}
+
+% ── Headers & sections ──────────────────────────────────────── (from file 2)
 \usepackage{fancyhdr}
 \usepackage{titlesec}
-\usepackage{enumitem}
-\usepackage{booktabs}
 \usepackage{caption}
+
+% ── Colors & shading ──────────────────────────────────────────
+\usepackage[table]{xcolor}
+
+% Priority badge colors only
+\definecolor{musthave}{HTML}{D9534F}
+\definecolor{musthavebg}{HTML}{FADADD}
+\definecolor{shouldhave}{HTML}{E07B39}
+\definecolor{shouldhavebg}{HTML}{FDEBD0}
+\definecolor{couldhave}{HTML}{5A8A5A}
+\definecolor{couldhavebg}{HTML}{DFF0D8}
+
+% Table structural colors
+\definecolor{tableheader}{HTML}{F2F2F2} 
+\definecolor{tableborder}{HTML}{BBBBBB}
+
+% ── Misc ──────────────────────────────────────────────────────
 \usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{ragged2e}
 
-\geometry{left=1.5cm,right=1.5cm,top=3cm,bottom=3cm}
-
+% ── Hyperref setup (from file 2) ──────────────────────────────
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -26,6 +65,7 @@
     citecolor=blue,
 }
 
+% ── Listings setup (from file 2) ──────────────────────────────
 \lstset{
     basicstyle=\ttfamily\small,
     breaklines=true,
@@ -35,11 +75,24 @@
     showstringspaces=false
 }
 
+% ── Page style (from file 2) ──────────────────────────────────
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+
+% ── Global table settings ─────────────────────────────────────
+\setlength{\tabcolsep}{8pt}
+\renewcommand{\arraystretch}{1.6}
+
+
+
+
+
+
+
+
 
 \begin{document}
 \thispagestyle{empty}
@@ -98,6 +151,7 @@
     \textbf{Academic Year: 2025 - 2026}
 
 %
+\end{center}
 \newpage
 %---------------------------------TABLE OF CONTENTS----------------------------------------------%
 \tableofcontents
@@ -115,5 +169,5 @@
 \include{chapters/9conclusion.tex}
 
 
-\end{center}
+
 \end{document}

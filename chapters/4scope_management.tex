@@ -1,4 +1,480 @@
-\chapter{Scope Management}
-    \section{Work Breakdown Structure (WBS)}
-    \section{WBS Dictionary}
-    \section{Requirements Traceability Matrix (RTM)}
+\chapter{Scope Management -- WBS, WBS Dictionary \& RTM}
+
+% ─────────────────────────────────────────────────────────────
+\section{Work Breakdown Structure (WBS)}
+
+The Work Breakdown Structure (WBS) is the foundational scope management artifact of the ERP
+migration project. Following the PMBoK deliverable-oriented decomposition principle, the WBS
+organizes the entire project into a hierarchical structure of work packages. Each work package is
+clearly bounded, assigned to a responsible owner, linked to a measurable deliverable, and
+traceable to both the Gantt schedule and the project budget.
+
+The WBS is structured around six major phases reflecting the project lifecycle: Initiation, Scope
+Planning, Planning, Migration, Deployment, and Closure. This structure ensures logical
+sequencing, prevents scope creep, and provides the baseline against which all progress is
+measured.
+
+\medskip
+\noindent\textbf{Key Principles Applied:}
+\begin{itemize}
+    \item \textbf{Deliverable-oriented:} each work package produces a tangible, verifiable output.
+    \item \textbf{Non-overlapping:} no two work packages share the same scope or deliverable.
+    \item \textbf{100\% Rule:} the WBS covers the complete scope — nothing is missing or duplicated.
+    \item \textbf{Traceable:} all work packages are linked to Gantt activities, budget lines, and RTM requirements.
+    \item \textbf{ESG-integrated:} sustainability tasks (LCA, ESG KPIs) are embedded within the migration and deployment phases.
+\end{itemize}
+
+% ── Table 4.1 ────────────────────────────────────────────────
+\begin{table}[H]
+\centering
+\caption{WBS Overview by Phase}
+\label{tab:wbs-overview}
+\arrayrulecolor{tableborder}
+\renewcommand{\arraystretch}{1.7}
+\small
+\begin{tabular}{|>{\bfseries}p{1.6cm}|p{3.0cm}|p{5.2cm}|p{1.8cm}|p{1.5cm}|p{1.2cm}|}
+\hline
+\rowcolor{tableheader}
+\textbf{WBS Code} &
+\textbf{Work Package} &
+\textbf{Main Deliverable} &
+\textbf{Timeline} &
+\textbf{Duration} &
+\textbf{Budget \%} \\
+\hline
+1.0 & Initiation & Project Charter (Scope, Objectives, ESG Vision, Stakeholders) & Weeks 1--2 & 2 weeks & 4\% \\
+\hline
+2.0 & Scope Planning & WBS + RTM (Requirements traceability and project decomposition) & Weeks 3--5 & 3 weeks & 6\% \\
+\hline
+3.0 & Planning & Gantt Schedule + Budget Baseline (cost \& time estimation) & Weeks 6--7 & 2 weeks & 5\% \\
+\hline
+4.0 & Migration & SaaS ERP Deployment (data migration + configuration + testing) & Weeks 8--19 & 12 weeks & 54\% \\
+\hline
+5.0 & Deployment & Go-Live + User Training + Stabilization Phase & Weeks 20--23 & 4 weeks & 19\% \\
+\hline
+6.0 & Closure & Final Project Report + Lessons Learned (REX) & Week 24 & 1 week & 3\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Interpretation:}
+\begin{itemize}
+    \item The \textbf{Initiation phase (1.0)} defines the project governance framework and produces the signed Project Charter.
+    \item The \textbf{Scope Planning phase (2.0)} produces the WBS and RTM — the two core scope control artifacts.
+    \item The \textbf{Planning phase (3.0)} establishes the baseline for schedule, budget, risk, quality, and communication.
+    \item The \textbf{Migration phase (4.0)} is the largest phase (54\% of budget) and represents the core technical execution of the ERP transformation.
+    \item The \textbf{Deployment phase (5.0)} ensures operational transition through training, Go-Live, and stabilization.
+    \item The \textbf{Closure phase (6.0)} formalizes project completion, captures lessons learned, and hands over governance to operations.
+\end{itemize}
+
+% ── Table 4.2 ────────────────────────────────────────────────
+% ── Table 4.2: Detailed WBS (Converted to longtable) ──────────
+\renewcommand{\arraystretch}{1.3}
+\scriptsize
+\arrayrulecolor{tableborder}
+\begin{longtable}{|>{\bfseries}p{1.1cm}|p{3.4cm}|p{3.1cm}|p{2.2cm}|p{1.0cm}|p{1.4cm}|p{0.8cm}|}
+    
+    % --- Table Caption & Label ---
+    \caption{Detailed WBS -- All Work Packages} \label{tab:wbs-detailed} \\
+    
+    % --- First Page Header ---
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Code} & \textbf{Work Package Name} & \textbf{Deliverable} & \textbf{Owner} & \textbf{Dur.} & \textbf{Cost (TND)} & \textbf{Bdgt} \\
+    \hline
+    \endfirsthead
+    
+    % --- Subsequent Page Headers (Repeating) ---
+    \hline
+    \rowcolor{tableheader}
+    \multicolumn{7}{|c|}{\textit{Continued from previous page}} \\
+    \hline
+    \rowcolor{tableheader}
+    \textbf{Code} & \textbf{Work Package Name} & \textbf{Deliverable} & \textbf{Owner} & \textbf{Dur.} & \textbf{Cost (TND)} & \textbf{Bdgt} \\
+    \hline
+    \endhead
+
+    % --- Footer for pages where table continues ---
+    \hline
+    \multicolumn{7}{|r|}{\textit{Continued on next page...}} \\
+    \hline
+    \endfoot
+
+  % --- Final Footer ---
+  \hline
+  \endlastfoot
+
+    % ── Phase 1 ──
+    \rowcolor{tableheader}
+    1.0 & \textbf{INITIATION} & Project Charter & Project Manager & 2 wks & 12{,}000 & 4\% \\
+    \hline
+    1.1 & Define Business Context \& Need & Problem Statement, ESG Vision & Business Analyst & 3 days & 2{,}500 & \\
+    \hline
+    1.2 & Identify \& Analyze Stakeholders & Stakeholder Register & Project Manager & 3 days & 1{,}500 & \\
+    \hline
+    1.3 & Draft Project Charter & Approved Charter Document & Project Manager & 4 days & 3{,}000 & \\
+    \hline
+    1.4 & Define Scope Boundaries & In-Scope / Out-of-Scope Statement & Business Analyst + PM & 2 days & 2{,}000 & \\
+    \hline
+    1.5 & Define SMART Objectives \& KPIs & Objectives Matrix + KPI Framework & Project Manager & 2 days & 2{,}000 & \\
+    \hline
+    1.6 & Charter Approval (GO Gate 1) & Signed Charter & Steering Committee & 1 day & 1{,}000 & \\
+    \hline
+
+    % ── Phase 2 ──
+    \rowcolor{tableheader}
+    2.0 & \textbf{SCOPE PLANNING} & WBS + RTM & WBS Manager & 3 wks & 18{,}000 & 6\% \\
+    \hline
+    2.1 & Map Existing ERP Processes (AS-IS) & AS-IS Process Map & Business Analyst & 5 days & 4{,}000 & \\
+    \hline
+    2.2 & Define Future State (TO-BE) & TO-BE Architecture & Business Analyst + CIO & 3 days & 3{,}000 & \\
+    \hline
+    2.3 & Build Detailed WBS & WBS Diagram + Work Packages & WBS Manager & 4 days & 3{,}500 & \\
+    \hline
+    2.4 & Draft WBS Dictionary & WBS Dictionary (all work packages) & WBS Manager & 4 days & 3{,}500 & \\
+    \hline
+    2.5 & Build Requirements Traceability Matrix (RTM) & RTM (all REQ linked to WBS) & WBS Manager + BA & 5 days & 4{,}000 & \\
+    \hline
+
+    % ── Phase 3 ──
+    \rowcolor{tableheader}
+    3.0 & \textbf{PLANNING} & Gantt + Budget Baseline & Planner + Finance & 2 wks & 15{,}000 & 5\% \\
+    \hline
+    3.1 & Build Gantt Chart \& CPM & Gantt Diagram + Critical Path & Planner & 3 days & 3{,}000 & \\
+    \hline
+    3.2 & Estimate Budget \& Resources & Budget Baseline & Finance Manager & 3 days & 3{,}000 & \\
+    \hline
+    3.3 & Develop Risk Register & Risk Register (probability/impact) & Quality \& Risk Manager & 2 days & 2{,}500 & \\
+    \hline
+    3.4 & Develop Communication Plan & Communication Plan & Quality \& Risk Manager & 2 days & 2{,}000 & \\
+    \hline
+    3.5 & Develop Quality Plan & Quality Plan (ISO, GDPR) & Quality \& Risk Manager & 2 days & 2{,}500 & \\
+    \hline
+    3.6 & Baseline Approval (GO Gate 2) & Approved Planning Baseline & Steering Committee & 1 day & 2{,}000 & \\
+    \hline
+
+    % ── Phase 4 ──
+    \rowcolor{tableheader}
+    4.0 & \textbf{MIGRATION (ERP SaaS)} & SaaS ERP Deployed & Integrator + CIO & 12 wks & 155{,}000 & 54\% \\
+    \hline
+    4.1 & ERP Environment Setup (Cloud) & Cloud Infrastructure Ready & CIO + Vendor & 5 days & 15{,}000 & \\
+    \hline
+    4.2 & Data Extraction \& Cleaning & Cleaned \& Validated Data Sets & Integrator & 10 days & 20{,}000 & \\
+    \hline
+    4.3 & Data Migration (HR, Finance, Procurement) & Migrated Data in SaaS ERP & Integrator & 15 days & 30{,}000 & \\
+    \hline
+    4.4 & ERP Configuration \& Customization & Configured ERP Modules & Integrator + Vendor & 12 days & 25{,}000 & \\
+    \hline
+    4.5 & API Integration (CRM, BI Tools) & Tested API Connections & Integrator & 8 days & 15{,}000 & \\
+    \hline
+    4.6 & Security \& GDPR Configuration & Compliance Report (GDPR, ISO 27001) & CISO + Integrator & 7 days & 15{,}000 & \\
+    \hline
+    4.7 & Unit \& Integration Testing & Test Reports (Pass/Fail) & Integrator + QA & 10 days & 18{,}000 & \\
+    \hline
+    4.8 & UAT -- User Acceptance Testing & UAT Sign-off ($\geq$95\% acceptance) & Business Teams + PM & 10 days & 12{,}000 & \\
+    \hline
+    4.9 & Migration Approval (GO Gate 3) & Migration Validated & Steering Committee & 1 day & 5{,}000 & \\
+    \hline
+
+    % ── Phase 5 ──
+    \rowcolor{tableheader}
+    5.0 & \textbf{DEPLOYMENT \& STABILIZATION} & ERP Live + Users Trained & PM + Vendor & 4 wks & 55{,}000 & 19\% \\
+    \hline
+    5.1 & User Training Program & Training Materials + Sessions & PM + Business Teams & 8 days & 12{,}000 & \\
+    \hline
+    5.2 & Go-Live Execution & ERP System Live & CIO + Vendor & 2 days & 10{,}000 & \\
+    \hline
+    5.3 & Post Go-Live Monitoring & Incident Log + SLA Report & Vendor + CIO & 10 days & 15{,}000 & \\
+    \hline
+    5.4 & Business Continuity \& DRP & BCP/DRP Plan Activated & CISO + PM & 5 days & 10{,}000 & \\
+    \hline
+    5.5 & ESG \& LCA Assessment (Post-Migration) & CO$_2$ Reduction Report & ESG Manager & 5 days & 8{,}000 & \\
+    \hline
+
+    % ── Phase 6 ──
+    \rowcolor{tableheader}
+    6.0 & \textbf{CLOSURE} & Final Report + REX & Project Manager & 1 wk & 10{,}000 & 3\% \\
+    \hline
+    6.1 & Final Performance Report & KPI Dashboard Final Report & PM & 3 days & 4{,}000 & \\
+    \hline
+    6.2 & Lessons Learned (REX) & REX Document & PM + Team & 2 days & 3{,}000 & \\
+    \hline
+    6.3 & Project Closure \& Handover & Signed Closure Report & Steering Committee & 1 day & 3{,}000 & \\
+    \hline
+\end{longtable}
+
+
+\noindent Each WBS work package is mapped to a corresponding activity in the Gantt schedule
+(Section~5), ensuring full alignment between scope and timeline.
+
+% ─────────────────────────────────────────────────────────────
+\section{WBS Dictionary}
+
+The WBS Dictionary provides a complete and formal description of each work package identified in
+the WBS. It defines the scope, deliverables, ownership, acceptance criteria, dependencies, and
+cost for each package. This document serves as the execution reference for all project team
+members and ensures no ambiguity in task responsibilities. Selected work packages are detailed
+below, covering all six project phases.
+
+\medskip
+\noindent\textit{Note: The WBS numbering follows a hierarchical structure rather than a
+chronological order, reflecting the decomposition of project phases.}
+\medskip
+
+% ── Dictionary macros ─────────────────────────────────────────
+\newcommand{\wbsentry}[3]{%
+  \vspace{6pt}
+  \noindent{\bfseries Work Package #1 -- #2}
+  \vspace{4pt}
+
+  \arrayrulecolor{tableborder}
+  \renewcommand{\arraystretch}{1.55}
+  \begin{tabular}{|>{\bfseries\raggedright\arraybackslash}p{3.6cm}|p{11.0cm}|}
+  \hline
+  #3
+  \hline
+  \end{tabular}
+  \vspace{10pt}
+}
+
+\newcommand{\wbsrow}[2]{#1 & #2 \\ \hline}
+\newcommand{\wbsrowa}[2]{#1 & #2 \\ \hline}
+
+% ── WP 1.1 ───────────────────────────────────────────────────
+\wbsentry{1.1}{Define Business Context \& Need}{%
+  \wbsrow{Description}{Analyze the current On-Premise ERP environment, identify limitations, and document the business justification for the SaaS migration. This forms the foundation for the Project Charter.}
+  \wbsrowa{Main Deliverable}{Problem Statement, ESG Vision Document}
+  \wbsrow{Responsible Owner}{Business Analyst}
+  \wbsrowa{Inputs}{Existing ERP documentation, business process inventory}
+  \wbsrow{Outputs}{Validated problem statement and strategic rationale}
+  \wbsrowa{Acceptance Criteria}{Approved by Project Manager and General Management}
+  \wbsrow{Estimated Duration}{3 days}
+  \wbsrowa{Estimated Cost}{2{,}500 TND}
+  \wbsrow{Dependencies}{None -- first work package}
+  \wbsrowa{Key Risk}{Incomplete process documentation may delay analysis}
+}
+
+% ── WP 1.3 ───────────────────────────────────────────────────
+\wbsentry{1.3}{Draft Project Charter}{%
+  \wbsrow{Description}{Produce the formal Project Charter including the purpose statement, project scope, hypotheses, SMART objectives, constraints, ESG criteria, and governance structure. This is the primary governance artifact for Phase~1.}
+  \wbsrowa{Main Deliverable}{Approved Project Charter Document}
+  \wbsrow{Responsible Owner}{Project Manager}
+  \wbsrowa{Inputs}{Problem statement (1.1), stakeholder register (1.2)}
+  \wbsrow{Outputs}{Signed and approved Project Charter}
+  \wbsrowa{Acceptance Criteria}{Approved by Steering Committee at GO Gate~1}
+  \wbsrow{Estimated Duration}{4 days}
+  \wbsrowa{Estimated Cost}{3{,}000 TND}
+  \wbsrow{Dependencies}{1.1, 1.2}
+  \wbsrowa{Key Risk}{Scope disagreements between stakeholders may require revision cycles}
+}
+
+% ── WP 2.3 ───────────────────────────────────────────────────
+\wbsentry{2.3}{Build Detailed WBS}{%
+  \wbsrow{Description}{Decompose the full project into hierarchical work packages using a deliverable-oriented approach. The WBS is structured into 6 main phases and 30+ sub-packages, each linked to a Gantt activity, budget line, and RTM requirement.}
+  \wbsrowa{Main Deliverable}{WBS Diagram (hierarchical) + Work Package List}
+  \wbsrow{Responsible Owner}{WBS Manager (Hanine)}
+  \wbsrowa{Inputs}{Validated scope (1.4), AS-IS/TO-BE process maps (2.1, 2.2)}
+  \wbsrow{Outputs}{Complete WBS structure serving as baseline for planning}
+  \wbsrowa{Acceptance Criteria}{Covers 100\% of scope; no overlap between work packages; validated by PM}
+  \wbsrow{Estimated Duration}{4 days}
+  \wbsrowa{Estimated Cost}{3{,}500 TND}
+  \wbsrow{Dependencies}{2.1, 2.2}
+  \wbsrowa{Key Risk}{Incomplete scope understanding may cause missing work packages}
+}
+
+% ── WP 2.4 ───────────────────────────────────────────────────
+\wbsentry{2.4}{Draft WBS Dictionary}{%
+  \wbsrow{Description}{Document each work package with full details: description, deliverable, owner, inputs/outputs, acceptance criteria, duration, cost, and dependencies. The dictionary is the reference artifact for project execution control.}
+  \wbsrowa{Main Deliverable}{WBS Dictionary (complete -- all work packages)}
+  \wbsrow{Responsible Owner}{WBS Manager (Hanine)}
+  \wbsrowa{Inputs}{WBS structure (2.3)}
+  \wbsrow{Outputs}{Detailed work package descriptions used by all team members}
+  \wbsrowa{Acceptance Criteria}{All work packages documented; validated by PM and team}
+  \wbsrow{Estimated Duration}{4 days}
+  \wbsrowa{Estimated Cost}{3{,}500 TND}
+  \wbsrow{Dependencies}{2.3}
+  \wbsrowa{Key Risk}{Resource and cost misestimations at this stage propagate to budget}
+}
+
+% ── WP 2.5 ───────────────────────────────────────────────────
+\wbsentry{2.5}{Build Requirements Traceability Matrix (RTM)}{%
+  \wbsrow{Description}{Link all business requirements to their corresponding WBS work packages, validation method, and KPI. The RTM ensures no requirement is lost during execution and supports GO/NO-GO decision-making at each project gate.}
+  \wbsrowa{Main Deliverable}{RTM document -- all REQ linked to WBS + KPI}
+  \wbsrow{Responsible Owner}{WBS Manager + Business Analyst}
+  \wbsrowa{Inputs}{Business requirements (from 2.1, 2.2), WBS (2.3)}
+  \wbsrow{Outputs}{RTM used as testing baseline and scope validation artifact}
+  \wbsrowa{Acceptance Criteria}{100\% of requirements traced; validated by PM and Steering Committee}
+  \wbsrow{Estimated Duration}{5 days}
+  \wbsrowa{Estimated Cost}{4{,}000 TND}
+  \wbsrow{Dependencies}{2.3, 2.4}
+  \wbsrowa{Key Risk}{Missing or ambiguous requirements lead to incomplete test coverage}
+}
+
+% ── WP 4.3 ───────────────────────────────────────────────────
+\wbsentry{4.3}{Data Migration (HR, Finance, Procurement)}{%
+  \wbsrow{Description}{Execute the extraction, transformation, and loading (ETL) of all ERP data from the On-Premise system to the SaaS Cloud platform. Covers three core modules: HR (payroll, leave, recruitment), Finance (accounting, invoicing, reporting), and Procurement (orders, suppliers, contracts).}
+  \wbsrowa{Main Deliverable}{Migrated and validated data sets in SaaS ERP}
+  \wbsrow{Responsible Owner}{Migration Integrator}
+  \wbsrowa{Inputs}{Cleaned data (4.2), configured SaaS environment (4.1)}
+  \wbsrow{Outputs}{All historical and active data available in cloud ERP}
+  \wbsrowa{Acceptance Criteria}{Zero data loss; 100\% data integrity validated by business teams}
+  \wbsrow{Estimated Duration}{15 days}
+  \wbsrowa{Estimated Cost}{30{,}000 TND}
+  \wbsrow{Dependencies}{4.1, 4.2}
+  \wbsrowa{Key Risk}{Data inconsistency; encoding issues; volume exceeding migration window}
+}
+
+% ── WP 4.8 ───────────────────────────────────────────────────
+\wbsentry{4.8}{UAT -- User Acceptance Testing}{%
+  \wbsrow{Description}{Conduct structured User Acceptance Testing with representatives from all business units (HR, Finance, Procurement). UAT scenarios are based on the RTM and must achieve $\geq$95\% functional acceptance before Go-Live authorization.}
+  \wbsrowa{Main Deliverable}{UAT test reports + Sign-off document}
+  \wbsrow{Responsible Owner}{Business Teams + Project Manager}
+  \wbsrowa{Inputs}{Configured ERP (4.4), trained users (5.1 partial), test scenarios from RTM}
+  \wbsrow{Outputs}{Signed UAT acceptance document; defect closure report}
+  \wbsrowa{Acceptance Criteria}{$\geq$95\% functional acceptance rate; all critical defects resolved}
+  \wbsrow{Estimated Duration}{10 days}
+  \wbsrowa{Estimated Cost}{12{,}000 TND}
+  \wbsrow{Dependencies}{4.3, 4.4, 4.5, 4.6, 4.7}
+  \wbsrowa{Key Risk}{Low user adoption; unexpected bugs requiring rework cycles}
+}
+
+% ── WP 5.1 ───────────────────────────────────────────────────
+\wbsentry{5.1}{User Training Program}{%
+  \wbsrow{Description}{Design and deliver role-based training sessions for all ERP end users across HR, Finance, and Procurement departments. Training must be completed before Go-Live and achieve 100\% completion rate.}
+  \wbsrowa{Main Deliverable}{Training materials (manuals, e-learning) + attendance records}
+  \wbsrow{Responsible Owner}{Project Manager + Business Teams}
+  \wbsrowa{Inputs}{Configured ERP modules, user role mapping}
+  \wbsrow{Outputs}{100\% of users trained and certified for their role}
+  \wbsrowa{Acceptance Criteria}{100\% training completion; user satisfaction score $\geq$7/10}
+  \wbsrow{Estimated Duration}{8 days}
+  \wbsrowa{Estimated Cost}{12{,}000 TND}
+  \wbsrow{Dependencies}{4.4, 4.8}
+  \wbsrowa{Key Risk}{Scheduling conflicts; low engagement from end users}
+}
+
+% ─────────────────────────────────────────────────────────────
+\section{Requirements Traceability Matrix (RTM)}
+
+The Requirements Traceability Matrix (RTM) is a critical project governance artifact that ensures
+end-to-end traceability between business needs and project deliverables. Each requirement is
+linked to its corresponding WBS work package, validation method, measurable KPI, and current
+status.
+
+The RTM is used throughout the project lifecycle to validate complete functional coverage,
+support structured testing during the UAT phase, enable data-driven GO/NO-GO decisions at
+milestone gates, and maintain alignment between scope, execution, and performance indicators.
+
+\medskip
+\noindent\textbf{RTM Priority Classification (MoSCoW method):}
+\begin{itemize}
+    \item \textbf{\textcolor{musthave}{Must Have:}} critical requirements whose failure would block Go-Live.
+    \item \textbf{\textcolor{shouldhave}{Should Have:}} high-value requirements that significantly improve project success.
+    \item \textbf{\textcolor{couldhave}{Could Have:}} desirable enhancements included if resources and time permit.
+\end{itemize}
+
+% ── Table 4.3 ────────────────────────────────────────────────
+\begin{table}[H]
+\centering
+\caption{Full Requirements Traceability Matrix (RTM)}
+\label{tab:rtm}
+\arrayrulecolor{tableborder}
+\renewcommand{\arraystretch}{1.65}
+\scriptsize
+\begin{tabular}{|p{1.1cm}|p{3.2cm}|p{1.8cm}|p{0.9cm}|p{2.8cm}|p{2.6cm}|p{1.2cm}|}
+\hline
+
+\textbf{REQ ID} &
+\textbf{Requirement} &
+\textbf{Priority} &
+\textbf{WBS} &
+\textbf{Validation Method} &
+\textbf{KPI / Success Criterion} &
+\textbf{Status} \\
+\hline
+
+REQ-01 & HR Module Migration (Payroll, Leave, Recruitment) &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+4.3 & UAT HR Test Suite & $\geq$95\% functional coverage & Pending UAT \\
+\hline
+
+REQ-02 & Finance Module Migration (Accounting, Invoicing) &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+4.3 & UAT Finance Tests & 100\% critical processes validated & Pending UAT \\
+\hline
+
+REQ-03 & Procurement Module Migration (Orders, Suppliers) &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+4.3 & UAT Procurement Tests & $\geq$95\% functional coverage & Pending UAT \\
+\hline
+
+REQ-04 & Cloud Infrastructure Setup \& Configuration &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+4.1 & Infrastructure readiness review & Environment available Week~8 & In Planning \\
+\hline
+
+REQ-05 & GDPR Compliance for All Migrated Data &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+4.6 & Security \& Compliance Audit & 0 critical non-compliance issues & In Planning \\
+\hline
+
+REQ-06 & SaaS Availability $\geq$99.5\% (SLA) &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+5.2 & SLA Monitoring \& Stress Testing & $\geq$99.5\% uptime post Go-Live & Post Go-Live \\
+\hline
+
+REQ-07 & Reduce IT Operational Costs by 30\% (3yr TCO) &
+\cellcolor{shouldhavebg}\textbf{\textcolor{shouldhave}{Should Have}} &
+3.2 & Financial Tracking (CPI Analysis) & CPI $\geq$ 0.95 & Ongoing \\
+\hline
+
+REQ-08 & 100\% User Training Completion Before Go-Live &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+5.1 & Training Attendance \& Certification & 100\% trained users & Pre Go-Live \\
+\hline
+
+REQ-09 & Reduce CO$_2$ Emissions by 40\% (LCA Scope~3) &
+\cellcolor{shouldhavebg}\textbf{\textcolor{shouldhave}{Should Have}} &
+5.5 & Life Cycle Assessment (LCA Study) & $-$40\% CO$_2$ vs On-Premise & Post Migration \\
+\hline
+
+REQ-10 & API Integration with CRM / BI Tools &
+\cellcolor{couldhavebg}\textbf{\textcolor{couldhave}{Could Have}} &
+4.5 & Integration Testing (API Response Rate) & API Success Rate $\geq$98\% & In Testing \\
+\hline
+
+REQ-11 & Business Continuity \& DRP Plan Activated &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+5.4 & BCP/DRP drill \& documentation review & RTO $\leq$4h; RPO $\leq$1h & Pre Go-Live \\
+\hline
+
+REQ-12 & Data Integrity Validation Post-Migration &
+\cellcolor{musthavebg}\textbf{\textcolor{musthave}{Must Have}} &
+4.3 & Data reconciliation report & 0\% data loss; 100\% record match & Post Migration \\
+\hline
+
+REQ-13 & ISO 27001 Alignment for Security Controls &
+\cellcolor{shouldhavebg}\textbf{\textcolor{shouldhave}{Should Have}} &
+4.6 & Security controls audit checklist & ISO 27001 gap score $\leq$5\% & In Planning \\
+\hline
+
+REQ-14 & Project KPI Dashboard Operational at Go-Live &
+\cellcolor{shouldhavebg}\textbf{\textcolor{shouldhave}{Should Have}} &
+6.1 & Dashboard review by Steering Committee & All KPIs visible and updated & Pre-Closure \\
+\hline
+
+\end{tabular}
+\end{table}
+
+\medskip
+\noindent\textbf{RTM Governance Rules:}
+\begin{itemize}
+    \item Any new requirement must be formally submitted through a Change Request (CR) process.
+    \item All \textit{Must Have} requirements must reach ``Validated'' status before the Steering Committee issues a GO for Go-Live.
+    \item The RTM is reviewed at each project gate (GO Gate~1, 2, 3) and updated continuously during UAT.
+    \item The WBS Manager (Hanine) maintains the RTM in collaboration with the Business Analyst and Quality Manager.
+\end{itemize}
+
+\medskip
+
+
+\vspace{12pt}
